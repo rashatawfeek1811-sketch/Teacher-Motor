@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switch Communications | Teacher Motor Luxury Activation Proposal</title>
-    <!-- English Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Arabic Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --switch-primary: #EB262A;
@@ -30,36 +27,6 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
-
-        /* Language & RTL Styling */
-        [lang="ar"] { display: none; }
-        html.lang-ar { direction: rtl; }
-        html.lang-ar body { font-family: 'Cairo', 'Poppins', sans-serif; }
-        html.lang-ar [lang="en"] { display: none !important; }
-        html.lang-ar [lang="ar"] { display: inline !important; }
-
-        /* Specific display overrides for block elements */
-        html.lang-ar h1 span[lang="ar"],
-        html.lang-ar h2 span[lang="ar"],
-        html.lang-ar h3 span[lang="ar"],
-        html.lang-ar h4 span[lang="ar"],
-        html.lang-ar p span[lang="ar"],
-        html.lang-ar li span[lang="ar"],
-        html.lang-ar div span[lang="ar"],
-        html.lang-ar a span[lang="ar"] {
-            display: inline-block !important;
-        }
-
-        /* Ensure block elements show properly in Arabic */
-        html.lang-ar h1, html.lang-ar h2, html.lang-ar h3, html.lang-ar h4, 
-        html.lang-ar p, html.lang-ar div, html.lang-ar li, html.lang-ar a {
-            display: block;
-        }
-        
-        html.lang-ar a.btn-primary, html.lang-ar a.service-cta {
-            display: inline-flex !important;
-        }
-
         .header {
             position: fixed;
             top: 0;
@@ -80,40 +47,18 @@
             align-items: center;
             gap: 1.5rem;
         }
-        .client-logo img { 
-            width: 140px; 
-            height: auto; 
-        }
-        .switch-logo img { 
-            width: 130px; 
-            height: auto; 
-        }
-        .lang-toggle-container {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 30px;
-            padding: 4px;
-            width: 100px;
-        }
+        .client-logo img { width: 130px; height: auto; }
+        .switch-logo img { width: 120px; height: auto; }
         .lang-toggle {
-            flex: 1;
-            background: transparent;
-            color: var(--text-muted);
+            background: linear-gradient(135deg, var(--switch-primary), var(--switch-secondary));
+            color: var(--dark-bg);
             border: none;
-            padding: 8px 0;
+            padding: 0.6rem 1.2rem;
             border-radius: 24px;
             cursor: pointer;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        .lang-toggle.active {
-            background: var(--switch-primary);
-            color: white;
             font-weight: 600;
+            box-shadow: 0 4px 15px rgba(235,38,42,0.2);
+            transition: all 0.3s ease;
         }
         .hero {
             min-height: 100vh;
@@ -122,7 +67,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            margin-top: 90px;
+            margin-top: 80px;
         }
         .hero-background {
             position: absolute;
@@ -140,8 +85,8 @@
             padding: 0 20px;
         }
         .hero-headline {
-            font-size: clamp(1.8rem, 5vw, 3.2rem);
-            line-height: 1.2;
+            font-size: clamp(2rem, 6vw, 4rem);
+            line-height: 1.1;
             font-weight: 800;
             text-shadow: 2px 6px 30px rgba(0,0,0,0.9);
             margin-bottom: 1.5rem;
@@ -170,7 +115,6 @@
             gap: 10px;
             text-decoration: none;
         }
-        html.lang-ar .btn-primary svg { transform: rotate(180deg); }
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(192,160,98,0.5);
@@ -223,7 +167,6 @@
             position: relative;
             overflow: hidden;
         }
-        html.lang-ar .why-card, html.lang-ar .strategic-card, html.lang-ar .service-card, html.lang-ar .result-card { text-align: right; }
         .why-card:hover, .strategic-card:hover, .service-card:hover {
             transform: translateY(-10px);
             border-color: rgba(192,160,98,0.4);
@@ -239,7 +182,6 @@
             background: linear-gradient(to bottom, var(--teacher-secondary), var(--switch-primary));
             transition: all 0.4s ease;
         }
-        html.lang-ar .why-card::before, html.lang-ar .strategic-card::before { left: auto; right: 0; }
         .why-card:hover::before, .strategic-card:hover::before {
             width: 100%;
             opacity: 0.1;
@@ -254,7 +196,6 @@
             justify-content: center;
             margin-bottom: 1.5rem;
             color: white;
-            font-size: 2rem;
         }
         .strategic-icon {
             width: 40px;
@@ -281,11 +222,6 @@
             border-radius: 20px;
             letter-spacing: 0.5px;
         }
-        html.lang-ar .service-card.popular::before {
-            content: 'الأكثر شيوعًا';
-            right: auto;
-            left: 15px;
-        }
         .service-features {
             list-style: none;
             padding: 0;
@@ -304,8 +240,6 @@
             color: var(--teacher-secondary);
             font-weight: bold;
         }
-        html.lang-ar .service-features li { flex-direction: row-reverse; }
-        html.lang-ar .service-features li::before { order: 1; }
         .service-price {
             font-size: 1.8rem;
             font-weight: 700;
@@ -344,7 +278,7 @@
         }
         .video-section {
             max-width: 850px;
-            margin: 2rem auto;
+            margin: 0 auto;
             position: relative;
             border-radius: 16px;
             overflow: hidden;
@@ -364,12 +298,6 @@
             border: none;
             object-fit: cover;
         }
-        .video-caption {
-            padding: 1rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
         footer {
             background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95));
             padding: 4rem 0 2rem;
@@ -384,7 +312,6 @@
             gap: 2.5rem;
             padding: 0 20px;
         }
-        html.lang-ar .footer-content { text-align: right; }
         .footer-column h4 {
             font-size: 1.3rem;
             margin-bottom: 1.8rem;
@@ -400,7 +327,6 @@
             height: 2px;
             background: linear-gradient(90deg, var(--teacher-secondary), var(--switch-primary));
         }
-        html.lang-ar .footer-column h4::after { left: auto; right: 0; }
         .contact-item {
             display: flex;
             align-items: flex-start;
@@ -408,13 +334,11 @@
             color: var(--text-muted);
             margin-bottom: 1rem;
         }
-        html.lang-ar .contact-item { flex-direction: row-reverse; }
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        html.lang-ar .social-links { justify-content: flex-end; }
         .social-links a {
             width: 42px;
             height: 42px;
@@ -425,7 +349,6 @@
             justify-content: center;
             color: white;
             transition: all 0.3s ease;
-            text-decoration: none;
         }
         .social-links a:hover {
             background: linear-gradient(135deg, var(--teacher-secondary), var(--switch-primary));
@@ -449,25 +372,9 @@
             transform: translateY(0);
         }
         @media (max-width: 768px) {
-            .client-logo img, .switch-logo img { 
-                width: 120px; 
-            }
-            .header {
-                padding: 1rem 5%;
-            }
-            .hero-headline { 
-                font-size: 2rem; 
-                margin-bottom: 1.2rem;
-            }
-            .hero {
-                margin-top: 80px;
-            }
-            .lang-toggle-container {
-                width: 90px;
-            }
-            .tagline {
-                font-size: 1.2rem;
-            }
+            .client-logo img, .switch-logo img { width: 110px; }
+            .hero-headline { font-size: 2.2rem; }
+            .section { padding: 3.5rem 0; }
         }
     </style>
 </head>
@@ -479,375 +386,251 @@
     </div>
 
     <div>
-        <h1 style="color:white;font-size:1.4rem;">
-            <span lang="en">Store Activation Studio</span>
-            <span lang="ar">استوديو تفعيل المتاجر</span>
-        </h1>
-        <p class="tagline">
-            <span lang="en">Where Prestige Meets Experience</span>
-            <span lang="ar">حيث تلتقي الفخامة بالتجربة</span>
-        </p>
+        <h1 style="color:white;font-size:1.4rem;">Store Activation Studio</h1>
+        <p class="tagline">Where Prestige Meets Experience</p>
     </div>
 
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <div class="lang-toggle-container">
-            <button class="lang-toggle active" id="lang-en" onclick="setLanguage('en')">EN</button>
-            <button class="lang-toggle" id="lang-ar" onclick="setLanguage('ar')">AR</button>
-        </div>
-        <div class="logo switch-logo">
-            <img src="https://cdn.brandfetch.io/idT79KhyRe/w/350/h/100/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1754744580728" alt="Switch Communications">
-        </div>
+    <div class="logo switch-logo">
+        <img src="https://cdn.brandfetch.io/idT79KhyRe/w/350/h/100/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1754744580728" alt="Switch Communications">
     </div>
 </header>
 
-<main>
-    <section class="hero">
-        <video class="hero-background" autoplay muted loop playsinline>
-            <source src="https://ik.imagekit.io/weo7pcw8v/VideoHerrobanner.mp4?updatedAt=1756283829552" type="video/mp4">
-        </video>
-        <div class="hero-content reveal">
-            <h1 class="hero-headline">
-                <span lang="en">Transform Teacher Motor Showrooms Into <span style="background:linear-gradient(90deg,var(--teacher-secondary),var(--switch-primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Ultra-Luxury Experience Centers</span></span>
-                <span lang="ar">تحويل صالات عرض تيتشر موتور إلى <span style="background:linear-gradient(90deg,var(--teacher-secondary),var(--switch-primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">مراكز تجربة فائقة الفخامة</span></span>
-            </h1>
-            <p class="hero-subhead">
-                <span lang="en">Elevate every touchpoint—from first glance to final signature—with immersive, cinematic activations designed for the world's most discerning clientele.</span>
-                <span lang="ar">ارتقِ بكل نقطة تفاعل—من النظرة الأولى حتى التوقيع النهائي—مع تفعيلات سينمائية غامرة مصممة لأكثر العملاء تطلبًا في العالم.</span>
-            </p>
-            <a href="#proposal" class="btn-primary">
-                <span lang="en">View Teacher Motor Proposal</span>
-                <span lang="ar">اطلع على مقترح تيتشر موتور</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-        </div>
-    </section>
+<section class="hero">
+    <video class="hero-background" autoplay muted loop playsinline>
+        <source src="https://ik.imagekit.io/weo7pcw8v/VideoHerrobanner.mp4?updatedAt=1756283829552" type="video/mp4">
+    </video>
+    <div class="hero-content reveal">
+        <h1 class="hero-headline">
+            Transform Teacher Motor Showrooms Into <span style="background:linear-gradient(90deg,var(--teacher-secondary),var(--switch-primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Ultra-Luxury Experience Centers</span>
+        </h1>
+        <p class="hero-subhead">
+            Elevate every touchpoint—from first glance to final signature—with immersive, cinematic activations designed for the world’s most discerning clientele.
+        </p>
+        <a href="#proposal" class="btn-primary">View Teacher Motor Proposal <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+</section>
 
-    <section class="section" id="why-switch">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>
-                    <span lang="en">Why Switch for Teacher Motor?</span>
-                    <span lang="ar">لماذا سويتش من أجل تيتشر موتور؟</span>
-                </h2>
-                <p>
-                    <span lang="en">We bridge the gap between prestige product and prestige presentation.</span>
-                    <span lang="ar">نحن نسد الفجوة بين المنتج الفاخر والعرض التقديمي الفاخر.</span>
-                </p>
+<section class="section" id="why-switch">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Why Switch for Teacher Motor?</h2>
+            <p>We bridge the gap between prestige product and prestige presentation.</p>
+        </div>
+        <div class="why-us-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">📸</div>
+                <h3>Cinematic Visual Identity</h3>
+                <p>Replace casual snapshots with studio-grade imagery, lighting rigs, and color-graded storytelling worthy of a Rolls-Royce key-fob reveal.</p>
             </div>
-            <div class="why-us-grid">
-                <div class="why-card reveal">
-                    <div class="why-icon">📸</div>
-                    <h3>
-                        <span lang="en">Cinematic Visual Identity</span>
-                        <span lang="ar">هوية بصرية سينمائية</span>
-                    </h3>
-                    <p>
-                        <span lang="en">Replace casual snapshots with studio-grade imagery, lighting rigs, and color-graded storytelling worthy of a Rolls-Royce key-fob reveal.</span>
-                        <span lang="ar">استبدال اللقطات العفوية بصور احترافية، وإضاءة استوديو، ورواية قصص مصححة الألوان تليق بكشف مفتاح رولز رويس.</span>
-                    </p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-icon">💬</div>
-                    <h3>
-                        <span lang="en">Elite Narrative Shift</span>
-                        <span lang="ar">تحول في السرد النخبوي</span>
-                    </h3>
-                    <p>
-                        <span lang="en">Move from "0% down" to "zero compromises," speaking directly to high-net-worth individuals who purchase rarity, not payments.</span>
-                        <span lang="ar">الانتقال من "دفعة أولى 0%" إلى "تنازلات صفرية"، والتحدث مباشرة إلى الأفراد ذوي الثروات العالية الذين يشترون الندرة، وليس الأقساط.</span>
-                    </p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-icon">🎯</div>
-                    <h3>
-                        <span lang="en">Audience Calibration</span>
-                        <span lang="ar">معايرة الجمهور</span>
-                    </h3>
-                    <p>
-                        <span lang="en">Our targeting filters the aspirational scrollers, retaining only the ultra-affluent ready to sign—today.</span>
-                        <span lang="ar">يستبعد استهدافنا المتصفحين الطامحين، ويبقي فقط على الأثرياء المستعدين للتوقيع—اليوم.</span>
-                    </p>
-                </div>
+            <div class="why-card reveal">
+                <div class="why-icon">💬</div>
+                <h3>Elite Narrative Shift</h3>
+                <p>Move from “0 % down” to “zero compromises,” speaking directly to high-net-worth individuals who purchase rarity, not payments.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🎯</div>
+                <h3>Audience Calibration</h3>
+                <p>Our targeting filters the aspirational scrollers, retaining only the ultra-affluent ready to sign—today.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="strategic">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>
-                    <span lang="en">Strategic Approach for Teacher Motor</span>
-                    <span lang="ar">النهج الاستراتيجي لتيتشر موتور</span>
-                </h2>
-                <p>
-                    <span lang="en">Three pillars guiding every touchpoint—visual, narrative, and experiential.</span>
-                    <span lang="ar">ثلاث ركائز توجه كل نقطة تفاعل—بصرية، وسردية، وتجريبية.</span>
-                </p>
+<section class="section" id="strategic">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Strategic Approach for Teacher Motor</h2>
+            <p>Three pillars guiding every touchpoint—visual, narrative, and experiential.</p>
+        </div>
+        <div class="strategic-grid">
+            <div class="strategic-card reveal">
+                <div class="strategic-icon">🎬</div>
+                <h3>Cinematic Production</h3>
+                <p>Studio lighting, controlled sets, and motion-graphics overlays that elevate every Teacher Motor vehicle to art-installation status.</p>
             </div>
-            <div class="strategic-grid">
-                <div class="strategic-card reveal">
-                    <div class="strategic-icon">🎬</div>
-                    <h3>
-                        <span lang="en">Cinematic Production</span>
-                        <span lang="ar">إنتاج سينمائي</span>
-                    </h3>
-                    <p>
-                        <span lang="en">Studio lighting, controlled sets, and motion-graphics overlays that elevate every Teacher Motor vehicle to art-installation status.</span>
-                        <span lang="ar">إضاءة استوديو، ومواقع تصوير محكومة، ورسومات متحركة ترفع كل سيارة من تيتشر موتور إلى مصاف التحف الفنية.</span>
-                    </p>
-                </div>
-                <div class="strategic-card reveal">
-                    <div class="strategic-icon">📝</div>
-                    <h3>
-                        <span lang="en">Luxury Storytelling</span>
-                        <span lang="ar">سرد قصصي فاخر</span>
-                    </h3>
-                    <p>
-                        <span lang="en">Copy that whispers exclusivity, heritage, and craftsmanship—financing details elegantly foot-noted, never headlined.</span>
-                        <span lang="ar">نصوص تهمس بالفخامة والتراث والحرفية—تفاصيل التمويل تُذكر بأناقة في الحواشي، وليس في العناوين الرئيسية.</span>
-                    </p>
-                </div>
-                <div class="strategic-card reveal">
-                    <div class="strategic-icon">📊</div>
-                    <h3>
-                        <span lang="en">Ultra-Affluent Targeting</span>
-                        <span lang="ar">استهداف فائق للأثرياء</span>
-                    </h3>
-                    <p>
-                        <span lang="en">Look-alike audiences, private-invite lists, and data-driven segmentation to ensure every handshake is with a qualified buyer.</span>
-                        <span lang="ar">جماهير مشابهة، وقوائم دعوات خاصة، وتقسيم قائم على البيانات لضمان أن تكون كل مصافحة مع مشترٍ مؤهل.</span>
-                    </p>
-                </div>
+            <div class="strategic-card reveal">
+                <div class="strategic-icon">📝</div>
+                <h3>Luxury Storytelling</h3>
+                <p>Copy that whispers exclusivity, heritage, and craftsmanship—financing details elegantly foot-noted, never headlined.</p>
+            </div>
+            <div class="strategic-card reveal">
+                <div class="strategic-icon">📊</div>
+                <h3>Ultra-Affluent Targeting</h3>
+                <p>Look-alike audiences, private-invite lists, and data-driven segmentation to ensure every handshake is with a qualified buyer.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="proposal" style="background:rgba(15,15,15,0.7);">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>
-                    <span lang="en">Teacher Motor Showcase Nights</span>
-                    <span lang="ar">أمسيات عرض تيتشر موتور</span>
-                </h2>
-                <p>
-                    <span lang="en">Invite-only evenings where the showroom becomes a private members' club on wheels.</span>
-                    <span lang="ar">أمسيات حصرية بدعوات فقط، حيث تتحول صالة العرض إلى نادٍ خاص متنقل للأعضاء.</span>
-                </p>
+<section class="section" id="proposal" style="background:rgba(15,15,15,0.7);">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Teacher Motor Showcase Nights</h2>
+            <p>Invite-only evenings where the showroom becomes a private members’ club on wheels.</p>
+        </div>
+        <div class="strategic-grid">
+            <div class="strategic-card reveal">
+                <div class="strategic-icon">🍸</div>
+                <h3>Cocktail & Culinary Theatre</h3>
+                <ul class="service-features">
+                    <li>Signature mixology bar aligned with each vehicle’s color palette</li>
+                    <li>Canapés curated by Michelin-trained chefs</li>
+                    <li>Champagne sabering moment synced with vehicle reveal</li>
+                </ul>
             </div>
-            <div class="strategic-grid">
-                <div class="strategic-card reveal">
-                    <div class="strategic-icon">🍸</div>
-                    <h3>
-                        <span lang="en">Cocktail & Culinary Theatre</span>
-                        <span lang="ar">مسرح الكوكتيل وفنون الطهي</span>
-                    </h3>
-                    <ul class="service-features">
-                        <li>
-                            <span lang="en">Signature mixology bar aligned with each vehicle's color palette</span>
-                            <span lang="ar">بار كوكتيلات مميز يتناغم مع لوحة ألوان كل سيارة</span>
-                        </li>
-                        <li>
-                            <span lang="en">Canapés curated by Michelin-trained chefs</span>
-                            <span lang="ar">مقبلات من إعداد طهاة مدربين على يد ميشلان</span>
-                        </li>
-                        <li>
-                            <span lang="en">Champagne sabering moment synced with vehicle reveal</span>
-                            <span lang="ar">لحظة فتح الشمبانيا بالسيف بالتزامن مع الكشف عن السيارة</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="strategic-card reveal">
-                    <div class="strategic-icon">🎤</div>
-                    <h3>
-                        <span lang="en">Live Performance Curation</span>
-                        <span lang="ar">تنظيم العروض الحية</span>
-                    </h3>
-                    <ul class="service-features">
-                        <li>
-                            <span lang="en">Acoustic set & live vocalist (indoor showroom acoustics tuned)</span>
-                            <span lang="ar">جلسة موسيقية صوتية ومطرب حي (مع ضبط صوتيات صالة العرض)</span>
-                        </li>
-                        <li>
-                            <span lang="en">Wheel-light runner outdoor spectacle</span>
-                            <span lang="ar">استعراض خارجي بممرات إضاءة العجلات</span>
-                        </li>
-                        <li>
-                            <span lang="en">Glow-stick dancers choreographed to engine-rev sound design</span>
-                            <span lang="ar">راقصون بالعصي المضيئة بتصميم حركي يتناغم مع صوت المحرك</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="strategic-card reveal">
+                <div class="strategic-icon">🎤</div>
+                <h3>Live Performance Curation</h3>
+                <ul class="service-features">
+                    <li>Acoustic set & live vocalist (indoor showroom acoustics tuned)</li>
+                    <li>Wheel-light runner outdoor spectacle</li>
+                    <li>Glow-stick dancers choreographed to engine-rev sound design</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="videos">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>
-                    <span lang="en">Teacher Motor Moments</span>
-                    <span lang="ar">لحظات تيتشر موتور</span>
-                </h2>
-                <p>
-                    <span lang="en">Every frame engineered for prestige.</span>
-                    <span lang="ar">كل إطار مصمم للفخامة.</span>
-                </p>
-            </div>
-            <div class="video-section reveal">
-                <div class="video-container">
-                    <video controls poster="https://ik.imagekit.io/weo7pcw8v/image.png?updatedAt=1756284076109">
-                        <source src="https://ik.imagekit.io/weo7pcw8v/singer_show.mp4?updatedAt=1756280661590" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-caption">
-                    <p>
-                        <span lang="en">Acoustic performance inside the showroom—intimate, immersive, unmistakably Teacher Motor.</span>
-                        <span lang="ar">عرض صوتي داخل صالة العرض—حمیمی وغامر، وبصمة تيتشر موتور التي لا تخطئها عين.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="video-section reveal">
-                <div class="video-container">
-                    <video controls>
-                        <source src="https://ik.imagekit.io/weo7pcw8v/Wheal_light_runner.mp4?updatedAt=1756280661049" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-caption">
-                    <p>
-                        <span lang="en">Wheel-light runner ignites the night—an outdoor spectacle heralding the arrival of a new legend.</span>
-                        <span lang="ar">ممر إضاءة العجلات يضيء الليل—استعراض خارجي يبشر بقدوم أسطورة جديدة.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="video-section reveal">
-                <div class="video-container">
-                    <video controls>
-                        <source src="https://ik.imagekit.io/weo7pcw8v/Coctail_recption.mp4?updatedAt=1756280502621" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-caption">
-                    <p>
-                        <span lang="en">Cocktail reception—where every handshake feels like a first-class boarding call.</span>
-                        <span lang="ar">حفل استقبال ومشروبات—حيث تبدو كل مصافحة وكأنها دعوة لركوب الدرجة الأولى.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="video-section reveal">
-                <div class="video-container">
-                    <video controls>
-                        <source src="https://ik.imagekit.io/weo7pcw8v/glowsticks_show.mp4?updatedAt=1756280441497" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-caption">
-                    <p>
-                        <span lang="en">Glow-stick dancers pulse to the rhythm of refined power.</span>
-                        <span lang="ar">راقصون بالعصي المضيئة ينبضون على إيقاع القوة الراقية.</span>
-                    </p>
-                </div>
-            </div>
+<section class="section" id="videos">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Teacher Motor Moments</h2>
+            <p>Every frame engineered for prestige.</p>
         </div>
-    </section>
 
-    <section class="section" id="results" style="background:rgba(15,15,15,0.7);">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>
-                    <span lang="en">Teacher Motor Results</span>
-                    <span lang="ar">نتائج تيتشر موتور</span>
-                </h2>
-                <p>
-                    <span lang="en">When presentation meets prestige, numbers speak in commas.</span>
-                    <span lang="ar">عندما يلتقي العرض بالفخامة، تتحدث الأرقام بالأصفار.</span>
-                </p>
+        <div class="video-section reveal">
+            <div class="video-container">
+                <video controls poster="https://ik.imagekit.io/weo7pcw8v/image.png?updatedAt=1756284076109">
+                    <source src="https://ik.imagekit.io/weo7pcw8v/singer_show.mp4?updatedAt=1756280661590" type="video/mp4">
+                </video>
             </div>
-            <div class="results-grid">
-                <div class="result-card reveal"><div class="result-value">+47%</div><div class="result-label"><span lang="en">Qualified Leads</span><span lang="ar">عملاء محتملون مؤهلون</span></div></div>
-                <div class="result-card reveal"><div class="result-value">38%</div><div class="result-label"><span lang="en">Close Rate</span><span lang="ar">معدل إتمام الصفقات</span></div></div>
-                <div class="result-card reveal"><div class="result-value">2.3M</div><div class="result-label"><span lang="en">Impressions</span><span lang="ar">مرات الظهور</span></div></div>
-                <div class="result-card reveal"><div class="result-value">42 min</div><div class="result-label"><span lang="en">Avg. Dwell Time</span><span lang="ar">متوسط وقت البقاء</span></div></div>
+            <div class="video-caption">
+                <p>Acoustic performance inside the showroom—intimate, immersive, unmistakably Teacher Motor.</p>
             </div>
         </div>
-    </section>
 
-    <section class="section" id="packages">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>
-                    <span lang="en">Your Teacher Motor Showroom Activation, Your Way</span>
-                    <span lang="ar">تفعيل صالة عرض تيتشر موتور الخاصة بك، على طريقتك</span>
-                </h2>
-                <p>
-                    <span lang="en">Select the engagement tier calibrated to your ambition.</span>
-                    <span lang="ar">اختر مستوى المشاركة الذي يتناسب مع طموحك.</span>
-                </p>
+        <div class="video-section reveal">
+            <div class="video-container">
+                <video controls>
+                    <source src="https://ik.imagekit.io/weo7pcw8v/Wheal_light_runner.mp4?updatedAt=1756280661049" type="video/mp4">
+                </video>
             </div>
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <h3><span lang="en">Signature</span><span lang="ar">سيجنتشر</span></h3>
-                    <div class="service-price"><span lang="en">Invitation-Only</span><span lang="ar">بدعوة فقط</span></div>
-                    <ul class="service-features">
-                        <li><span lang="en">Multi-site flagship rollout</span><span lang="ar">إطلاق في عدة مواقع رئيسية</span></li>
-                        <li><span lang="en">Private jet & yacht tie-ins</span><span lang="ar">شراكات مع الطائرات الخاصة واليخوت</span></li>
-                        <li><span lang="en">Ultra-HD after-movie</span><span lang="ar">فيديو ختامي فائق الدقة</span></li>
-                        <li><span lang="en">Concierge RSVP management</span><span lang="ar">إدارة تأكيد الحضور عبر الكونسيرج</span></li>
-                    </ul>
-                    <a href="#" class="service-cta"><span lang="en">Select Signature</span><span lang="ar">اختر سيجنتشر</span></a>
-                </div>
-                <div class="service-card popular reveal">
-                    <h3><span lang="en">Teacher Motor Pro</span><span lang="ar">تيتشر موتور برو</span></h3>
-                    <div class="service-price"><span lang="en">Premier</span><span lang="ar">بريميير</span></div>
-                    <ul class="service-features">
-                        <li><span lang="en">Single-location luxury activation</span><span lang="ar">تفعيل فاخر في موقع واحد</span></li>
-                        <li><span lang="en">Live entertainment & mixology</span><span lang="ar">ترفيه حي وبار كوكتيلات</span></li>
-                        <li><span lang="en">Photography & micro-content suite</span><span lang="ar">تصوير فوتوغرافي وحزمة محتوى مصغر</span></li>
-                        <li><span lang="en">Real-time lead-tracking dashboard</span><span lang="ar">لوحة تحكم لتتبع العملاء مباشرة</span></li>
-                    </ul>
-                    <a href="#" class="service-cta"><span lang="en">Select Pro</span><span lang="ar">اختر برو</span></a>
-                </div>
-                <div class="service-card reveal">
-                    <h3><span lang="en">Essential</span><span lang="ar">إيسنشال</span></h3>
-                    <div class="service-price"><span lang="en">Curated</span><span lang="ar">منسق</span></div>
-                    <ul class="service-features">
-                        <li><span lang="en">Modular activation kit</span><span lang="ar">مجموعة تفعيل قابلة للتخصيص</span></li>
-                        <li><span lang="en">Staff styling & training</span><span lang="ar">تدريب وتصميم أزياء الموظفين</span></li>
-                        <li><span lang="en">Standard content package</span><span lang="ar">باقة محتوى قياسية</span></li>
-                        <li><span lang="en">Post-event impact report</span><span lang="ar">تقرير تأثير ما بعد الحدث</span></li>
-                    </ul>
-                    <a href="#" class="service-cta"><span lang="en">Select Essential</span><span lang="ar">اختر إيسنشال</span></a>
-                </div>
+            <div class="video-caption">
+                <p>Wheel-light runner ignites the night—an outdoor spectacle heralding the arrival of a new legend.</p>
             </div>
         </div>
-    </section>
-</main>
+
+        <div class="video-section reveal">
+            <div class="video-container">
+                <video controls>
+                    <source src="https://ik.imagekit.io/weo7pcw8v/Coctail_recption.mp4?updatedAt=1756280502621" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-caption">
+                <p>Cocktail reception—where every handshake feels like a first-class boarding call.</p>
+            </div>
+        </div>
+
+        <div class="video-section reveal">
+            <div class="video-container">
+                <video controls>
+                    <source src="https://ik.imagekit.io/weo7pcw8v/glowsticks_show.mp4?updatedAt=1756280441497" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-caption">
+                <p>Glow-stick dancers pulse to the rhythm of refined power.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="results" style="background:rgba(15,15,15,0.7);">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Teacher Motor Results</h2>
+            <p>When presentation meets prestige, numbers speak in commas.</p>
+        </div>
+        <div class="results-grid">
+            <div class="result-card reveal"><div class="result-value">+47%</div><div class="result-label">Qualified Leads</div></div>
+            <div class="result-card reveal"><div class="result-value">38%</div><div class="result-label">Close Rate</div></div>
+            <div class="result-card reveal"><div class="result-value">2.3M</div><div class="result-label">Impressions</div></div>
+            <div class="result-card reveal"><div class="result-value">42 min</div><div class="result-label">Avg. Dwell Time</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="packages">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Your Teacher Motor Showroom Activation, Your Way</h2>
+            <p>Select the engagement tier calibrated to your ambition.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <h3>Signature</h3>
+                <div class="service-price">Invitation-Only</div>
+                <ul class="service-features">
+                    <li>Multi-site flagship rollout</li>
+                    <li>Private jet & yacht tie-ins</li>
+                    <li>Ultra-HD after-movie</li>
+                    <li>Concierge RSVP management</li>
+                </ul>
+                <a href="#" class="service-cta">Select Signature</a>
+            </div>
+            <div class="service-card popular reveal">
+                <h3>Teacher Motor Pro</h3>
+                <div class="service-price">Premier</div>
+                <ul class="service-features">
+                    <li>Single-location luxury activation</li>
+                    <li>Live entertainment & mixology</li>
+                    <li>Photography & micro-content suite</li>
+                    <li>Real-time lead-tracking dashboard</li>
+                </ul>
+                <a href="#" class="service-cta">Select Pro</a>
+            </div>
+            <div class="service-card reveal">
+                <h3>Essential</h3>
+                <div class="service-price">Curated</div>
+                <ul class="service-features">
+                    <li>Modular activation kit</li>
+                    <li>Staff styling & training</li>
+                    <li>Standard content package</li>
+                    <li>Post-event impact report</li>
+                </ul>
+                <a href="#" class="service-cta">Select Essential</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer>
     <div class="footer-content">
         <div class="footer-column">
-            <h4><span lang="en">Contact Us</span><span lang="ar">تواصل معنا</span></h4>
+            <h4>Contact Us</h4>
             <div class="contact-item">
-                <span lang="en"><strong>Cairo Office</strong><br>23 El-Nahda Street, 7 St, Maadi Sarayat, El Maleka Tower, Second Floor.<br>Maadi, Cairo — Switch Advertising</span>
-                <span lang="ar"><strong>مكتب القاهرة</strong><br>23 شارع النهضة، شارع 7، سرايات المعادي، برج الملكة، الطابق الثاني.<br>المعادي، القاهرة — سويتش للدعاية والإعلان</span>
+                <strong>Cairo Office</strong><br>
+                23 El-Nahda Street, 7 St, Maadi Sarayat, El Maleka Tower, Second Floor.<br>Maadi, Cairo — Switch Advertising
             </div>
             <div class="contact-item">
-                <span lang="en"><strong>Switch LLC</strong><br>Sugar Land, Houston, Texas, USA</span>
-                <span lang="ar"><strong>سويتش ذات مسؤولية محدودة</strong><br>شوجر لاند، هيوستن، تكساس، الولايات المتحدة الأمريكية</span>
+                <strong>Switch LLC</strong><br>
+                Sugar Land, Houston, Texas, USA
             </div>
             <div class="contact-item">
-                <span lang="en"><strong>Switch</strong><br>Deira, Dubai, UAE</span>
-                <span lang="ar"><strong>سويتش</strong><br>ديرة، دبي، الإمارات العربية المتحدة</span>
+                <strong>Switch</strong><br>
+                Deira, Dubai, UAE
             </div>
         </div>
         <div class="footer-column">
-            <h4><span lang="en">Our Expertise</span><span lang="ar">خبراتنا</span></h4>
+            <h4>Our Expertise</h4>
             <ul style="list-style:none;color:var(--text-muted);line-height:2;">
-                <li><span lang="en">Showroom Activations</span><span lang="ar">تفعيلات صالات العرض</span></li>
-                <li><span lang="en">Luxury Event Curation</span><span lang="ar">تنظيم الفعاليات الفاخرة</span></li>
-                <li><span lang="en">Ultra-Affluent Targeting</span><span lang="ar">استهداف فائق للأثرياء</span></li>
-                <li><span lang="en">Cinematic Content Creation</span><span lang="ar">إنشاء محتوى سينمائي</span></li>
+                <li>Showroom Activations</li>
+                <li>Luxury Event Curation</li>
+                <li>Ultra-Affluent Targeting</li>
+                <li>Cinematic Content Creation</li>
             </ul>
         </div>
         <div class="footer-column">
-            <h4><span lang="en">Follow Switch</span><span lang="ar">تابع سويتش</span></h4>
+            <h4>Follow Switch</h4>
             <div class="social-links">
                 <a href="#">FB</a>
                 <a href="#">IG</a>
@@ -858,14 +641,13 @@
         </div>
     </div>
     <div class="copyright">
-        <span lang="en">© 2025 Switch Communications. All rights reserved.<br>Specializing in automotive showroom activations and brand experiences.</span>
-        <span lang="ar">© 2025 سويتش كوميونيكيشنز. جميع الحقوق محفوظة.<br>متخصصون في تفعيلات صالات عرض السيارات والتجارب التجارية.</span>
+        © 2025 Switch Communications. All rights reserved.<br>
+        Specializing in automotive showroom activations and brand experiences.
     </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    // Reveal on scroll animation
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -876,7 +658,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, {threshold:0.15});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -886,36 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Initialize default language
-    setLanguage('en');
 });
-
-// Language switching logic using JavaScript variables (not localStorage)
-let currentLanguage = 'en';
-
-function setLanguage(lang) {
-    const html = document.documentElement;
-    html.lang = lang;
-    
-    if (lang === 'ar') {
-        html.classList.add('lang-ar');
-    } else {
-        html.classList.remove('lang-ar');
-    }
-
-    // Update active button state
-    const enButton = document.getElementById('lang-en');
-    const arButton = document.getElementById('lang-ar');
-    
-    if (enButton && arButton) {
-        enButton.classList.toggle('active', lang === 'en');
-        arButton.classList.toggle('active', lang === 'ar');
-    }
-
-    // Store current language in JavaScript variable
-    currentLanguage = lang;
-}
 </script>
 
 </body>
